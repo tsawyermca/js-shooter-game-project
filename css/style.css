@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+#gameTitle {
+  color: white;
+  font-size: 3vw;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+#gameAreaWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#gameArea {
+  width: 60vw;
+  max-width: 300px;
+  height: 100vw;
+  max-height: 500px;
+  background: #333;
+  position: relative;
+  border: 2px solid #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  width: 40vw;
+  max-width: 200px;
+  height: 100vw;
+  max-height: 500px;
+  background: #444;
+  color: white;
+  padding: 1.5vw;
+  font-size: 1.4vw;
+  border: 2px solid #fff;
+  border-left: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+#controls {
+  font-size: 1.2vw;
+  margin-top: auto;
+}
+
+#controls div:not(:first-child) {
+  margin-bottom: 0.5vw;
+}
+
+#player {
+  width: 7.2vw;
+  max-width: 36px;
+  height: 7.2vw;
+  max-height: 36px;
+  background-image: url(../sprites/player_sprite.png);
+  background-size:cover;
+  position: absolute;
+  left: 26vw;
+  top: 50vw;
+}
+
+.enemyA {
+  width: 4.8vw;
+  max-width: 24px;
+  height: 4.8vw;
+  max-height: 24px;
+  background-image: url(../sprites/enemyA_sprite.png);
+  background-size: cover;
+  position: absolute;
+}
+
+.enemyB {
+  width: 6.4vw;
+  max-width: 32px;
+  height: 6.4vw;
+  max-height: 32px;
+  background-image: url(../sprites/enemyB_sprite.png);
+  background-size: cover;
+  position: absolute;
+}
+
+.enemyC {
+  width: 5.6vw;
+  max-width: 28px;
+  height: 5.6vw;
+  max-height: 28px;
+  background-image: url(../sprites/enemyC_sprite.png);
+  background-size: cover;
+  position: absolute;
+  transform-origin: center;
+}
+
+.enemyD {
+  width: 4.8vw;
+  max-width: 24px;
+  height: 4.8vw;
+  max-height: 24px;
+  background-image: url(../sprites/enemyD_sprite.png);
+  background-size: cover;
+  position: absolute;
+}
+
+.enemyE {
+  width: 6.4vw;
+  max-width: 32px;
+  height: 6.4vw;
+  max-height: 32px;
+  background-image: url(../sprites/enemyE_sprite.png);
+  background-size: cover;
+  position: absolute;
+}
+
+.enemyF {
+  width: 5.6vw;
+  max-width: 28px;
+  height: 5.6vw;
+  max-height: 28px;
+  background-image: url(../sprites/enemyF_sprite.png);
+  background-size: cover;
+  position: absolute;
+  transform-origin: center;
+}
+
+.bullet {
+  width: 2vw;
+  max-width: 10px;
+  height: 2vw;
+  max-height: 10px;
+  background-image: url(../sprites/bullet_sprite.png);
+  background-size: cover;
+  position: absolute;
+}
+
+#gameOver {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3vw;
+  text-align: center;
+}
+
+#pauseStatus {
+  display: none;
+  color: white;
+  font-size: 1.4vw;
+  text-align: center;
+  margin-top: 1vw;
+}
+
+@media (max-width: 600px) {
+  #gameTitle {
+    font-size: 4vw;
+  }
+  #sidebar {
+    font-size: 3vw;
+  }
+  #controls {
+    font-size: 2.2vw;
+  }
+  #gameOver {
+    font-size: 5vw;
+  }
+  #pauseStatus {
+    font-size: 3vw;
+  }
+  #muteButton {
+    font-size: 2.2vw;
+    padding: 0.6vw;
+  }
+}
+
+#muteButton {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.2vw;
+  color: white;
+  background: #555;
+  border: 1px solid #fff;
+  padding: 0.4vw;
+  cursor: pointer;
+  margin-top: 0.5vw;
+  width: 100%;
+  text-align: center;
+}
+
+#muteButton:hover {
+  background: #666;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    font-size: 1.8vw;
+    padding: 2vw;
+  }
+  #controls {
+    font-size: 1.5vw;
+  }
+  #pauseStatus {
+    font-size: 1.8vw;
+  }
+  #muteButton {
+    font-size: 1.5vw;
+    padding: 0.5vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  #sidebar {
+    font-size: 1.2vw;
+    padding: 1vw;
+  }
+  #controls {
+    font-size: 1vw;
+  }
+  #pauseStatus {
+    font-size: 1.2vw;
+  }
+  #muteButton {
+    font-size: 1vw;
+    padding: 0.3vw;
+  }
+  #gameOver {
+    font-size: 2.3vw;
+  }
+}

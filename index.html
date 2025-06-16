@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top-Down Shooter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div id="gameTitle">Shooter</div>
+    <div id="gameAreaWrapper">
+      <div id="gameArea">
+        <div id="player"></div>
+        <div id="gameOver">Game Over!<br>Press R to Restart</div>
+      </div>
+      <div id="sidebar">
+        <div id="stats">
+          <div>Score: <span id="score">0</span></div>
+          <div>Kills: <span id="kills">0</span></div>
+          <div>Wave: <span id="wave">0</span></div>
+          <div id="pauseStatus">Paused</div>
+        </div>
+        <div id="controls">
+          <div>Controls</div>
+          <div>Move: W,A,S,D</div>
+          <div>Shoot: Space</div>
+          <div>Pause: P</div>
+          <button id="muteButton">Mute</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <audio id="backgroundMusic" loop>
+    <source src="./audio/main_theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="./js/app.js"></script>
+</body>
+</html>
