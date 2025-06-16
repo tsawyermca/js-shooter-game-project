@@ -20,7 +20,7 @@ let keys = {};
 const basePlayerSpeed = 2.5;
 const baseBulletSpeed = 5;
 const baseEnemySpeed = 0.6;
-const waveInterval = 10000;
+const waveInterval = 8000;
 let enemiesPerWave = 4;
 
 
